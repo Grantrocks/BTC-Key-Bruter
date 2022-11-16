@@ -18,7 +18,7 @@ generated=0
 for a in range(min_length,max_length):
     passwords_generated=0
     for s in iter_all_strings(a):
-        passwords.append(s)
+        passwords.append(f"{passwords_generated},s")
         if s=="/"*a:
             print(f"{passwords_generated} paswords with a length of {a}")
             break
