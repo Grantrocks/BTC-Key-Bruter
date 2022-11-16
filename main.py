@@ -1,5 +1,5 @@
 max_passwords_generated=100000000000000000000000000000000
-max_length=15
+max_length=16
 min_length=8 #reccommended is 8 long as its standard now
 wait_time=0
 rest=20
@@ -31,3 +31,6 @@ for a in range(min_length,max_length):
     time.sleep(5)
     if max_passwords_generated==generated:
         break
+with open("pwdatabase.txt","w") as f:
+    f.write("\n".join(passwords))
+print("Complete")
